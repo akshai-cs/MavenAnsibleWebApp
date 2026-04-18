@@ -28,11 +28,11 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {
-               sh 'mvn clean package'  
-               sh 'ansible-playbook playbook.yml -i inventory.ini'
-            }
-        }
+    steps {
+        sh 'ansible-playbook ansible/playbook.yml -i ansible/inventory.ini'
+    }
+}
+
 
                   
     }
