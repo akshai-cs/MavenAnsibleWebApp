@@ -7,6 +7,9 @@
       copy:
         src: "/var/lib/jenkins/workspace/MavenAnsibleWebApp/target/MavenAnsibleWebApp.war"
         dest: "/opt/tomcat/webapps/MavenAnsibleWebApp.war"
+        owner: akshai
+        group: akshai
+        mode: '0755'
         remote_src: no
 
     - name: Restart Tomcat
